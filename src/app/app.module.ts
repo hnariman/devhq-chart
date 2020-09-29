@@ -1,16 +1,23 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { MatIconModule } from '@angular/material/icon';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { GoogleChartsModule } from 'angular-google-charts';
 
-import { AppComponent } from './app.component';
+import { Main } from './app';
+import { Navbar } from './navbar';
+import { Table } from './table';
+import { Footer } from './footer';
+import { Chart } from './chart';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatIconModule,
+    GoogleChartsModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  declarations: [Main, Navbar, Table, Footer, Chart],
+  bootstrap: [Main],
 })
-export class AppModule { }
+export class AppModule {}
